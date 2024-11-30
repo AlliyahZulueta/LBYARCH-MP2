@@ -38,5 +38,5 @@ Photo Captured by: Alliyah Zulueta:
 
 ### Comparative Analysis: 
 
-
+The ASM kernel outperforms the C kernel in all the tests we conducted. While the C kernel is easier to develop and maintain, it is consistently slower due to the program passing through a compiler, while ASM code is directly translated into CPU instructions. Furthermore, the program crashes at 2^30 due to excessive memory demands that exceed system limits. The results also show that the ASM kernel scales more effectively with larger data sizes, making it a superior choice for performance-critical applications, despite its complexity and it being less flexible 
 
