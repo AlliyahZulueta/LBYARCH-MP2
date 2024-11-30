@@ -39,27 +39,51 @@ Photo Captured by Alliyah Zulueta [SET 2]:
 ### Comparative Analysis: 
 
 [SET 1]: 
+
 Vector size: 2^20
-  C Kernel: 0.010300 seconds
-  ASM Kernel: 0.003600 seconds  
+
+    C Kernel: 0.010300 seconds
+  
+    ASM Kernel: 0.003600 seconds  
+
+
 Vector size: 2^24
-  C Kernel: 0.164533 seconds
-  ASM Kernel: 0.059467 seconds
+
+    C Kernel: 0.164533 seconds
+  
+    ASM Kernel: 0.059467 seconds
+
+  
 Vector size: 2^28
-  C Kernel: 4.276367 seconds
-  ASM Kernel: 1.007367 seconds
+
+    C Kernel: 4.276367 seconds
+  
+    ASM Kernel: 1.007367 seconds
+
+
+  
 
 
 [SET 2]: 
+
 Vector size: 2^20
-  C Kernel: 0.009833 seconds
-  ASM Kernel: 0.004100 seconds
+
+    C Kernel: 0.009833 seconds
+  
+    ASM Kernel: 0.004100 seconds
+
+  
 Vector size: 2^24
-  C Kernel: 0.158300 seconds
-  ASM Kernel: 0.064233 seconds
+
+    C Kernel: 0.158300 seconds
+  
+    ASM Kernel: 0.064233 seconds
+  
 Vector size: 2^28
-  C Kernel: 2.710000 seconds
-  ASM Kernel: 1.083533 seconds
+
+    C Kernel: 2.710000 seconds
+  
+    ASM Kernel: 1.083533 seconds
 
 
 The ASM kernel outperforms the C kernel in all the tests we conducted. While the C kernel is easier to develop and maintain, it is consistently slower due to the program passing through a compiler, while ASM code is directly translated into CPU instructions. Furthermore, the program crashes at 2^30 due to excessive memory demands that exceed system limits. The results also show that the ASM kernel scales more effectively with larger data sizes, making it a superior choice for performance-critical applications, despite its complexity and it being less flexible 
