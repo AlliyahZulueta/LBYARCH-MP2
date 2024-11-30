@@ -9,7 +9,7 @@ Specifications:
 
 
 ### C and x86-64s Screenshots: 
-Photo Captured by Justin Aganon:  
+Photo Captured by Justin Aganon [SET 1]:  
 
 
 ![5c6c646a-750d-4517-aaa1-474a8db71e88](https://github.com/user-attachments/assets/fb11b9ac-7877-4e77-b516-dbb0d73780f5)
@@ -21,7 +21,7 @@ Photo Captured by Justin Aganon:
 ![901aaef7-edaa-4aac-bd13-405a2004a037](https://github.com/user-attachments/assets/ff2f5f95-e73b-455e-be1a-a9387bb65db1)
 
 
-Photo Captured by: Alliyah Zulueta: 
+Photo Captured by Alliyah Zulueta [SET 2]: 
 
 ![141e0cbe-e781-4d55-b14f-a563bf3e6a37](https://github.com/user-attachments/assets/b832a67d-8251-45b6-9414-28dbcc53fcd5)
 
@@ -37,6 +37,30 @@ Photo Captured by: Alliyah Zulueta:
 
 
 ### Comparative Analysis: 
+
+[SET 1]: 
+Vector size: 2^20
+  C Kernel: 0.010300 seconds
+  ASM Kernel: 0.003600 seconds  
+Vector size: 2^24
+  C Kernel: 0.164533 seconds
+  ASM Kernel: 0.059467 seconds
+Vector size: 2^28
+  C Kernel: 4.276367 seconds
+  ASM Kernel: 1.007367 seconds
+
+
+[SET 2]: 
+Vector size: 2^20
+  C Kernel: 0.009833 seconds
+  ASM Kernel: 0.004100 seconds
+Vector size: 2^24
+  C Kernel: 0.158300 seconds
+  ASM Kernel: 0.064233 seconds
+Vector size: 2^28
+  C Kernel: 2.710000 seconds
+  ASM Kernel: 1.083533 seconds
+
 
 The ASM kernel outperforms the C kernel in all the tests we conducted. While the C kernel is easier to develop and maintain, it is consistently slower due to the program passing through a compiler, while ASM code is directly translated into CPU instructions. Furthermore, the program crashes at 2^30 due to excessive memory demands that exceed system limits. The results also show that the ASM kernel scales more effectively with larger data sizes, making it a superior choice for performance-critical applications, despite its complexity and it being less flexible 
 
